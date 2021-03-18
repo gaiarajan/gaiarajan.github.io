@@ -85,6 +85,12 @@ header a:hover {
   .col-md-6, .col-md-8, .col-md-4 {
     width: 100%;
   }
+  .indexbody
+  {
+    width:100%!important;
+    position:relative;
+    overflow-x:hidden;
+  }
 }
 
 @media (max-width: 768px) {
