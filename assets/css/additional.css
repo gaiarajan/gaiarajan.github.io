@@ -8,9 +8,10 @@
   #introo {
     background-color: #ffe3e6!important;
   }
-  #index {
-  overflow-x: hidden;
-}
+  #indexxx{
+    overflow-x: hidden;
+    width: 100%;
+  }
 }
 
 
