@@ -8,7 +8,15 @@
   #introo {
     background-color: #ffe3e6!important;
   }
+  html, body {
+  overflow-x: hidden;
 }
+body {
+  position: relative
+}
+}
+
+
 
 header a {
   color: rgb(182,88,91)!important;
