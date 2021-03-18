@@ -8,11 +8,8 @@
   #introo {
     background-color: #ffe3e6!important;
   }
-  html, body {
+  header {
   overflow-x: hidden;
-}
-body {
-  position: relative
 }
 }
 
