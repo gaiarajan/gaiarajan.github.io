@@ -1,26 +1,30 @@
-@media (max-width: 670px) {
-  .masthead {
-    /*display: none!important;*/
-  }
-}
-
 @media (max-width: 1000px) {
   #introo {
     background-color: #ffe3e6!important;
   }
-  #indexxx{
-    overflow-x: hidden!important;
+}
+
+@media (max-width: 768px) {
+  .masthead {
     width: 100%!important;
+    position: relative;
+    overflow-x: hidden;
   }
 }
 
+@media (max-width: 768px) {
+  .indexbody {
+    width: 100%!important;
+    position: relative;
+    overflow-x: hidden;
+  }
+}
 
-
-header a {
+.masthead a {
   color: rgb(182,88,91)!important;
 }
 
-header a:hover {
+.masthead a:hover {
   color: black!important;
 }
 
@@ -83,19 +87,19 @@ header a:hover {
 
 @media (max-width: 768px) {
   .col-md-6, .col-md-8, .col-md-4 {
-    width: 100%;
-  }
-  .indexbody
-  {
-    width:100%!important;
-    position:relative;
-    overflow-x:hidden;
+    /*width: 100%;*/
   }
 }
 
 @media (max-width: 768px) {
-  #titleeee {
-    padding-top: 20%;
+  .masthead .main-image {
+    max-width: 90%!important;
+  }
+}
+
+@media (max-width: 768px) {
+  .masthead {
+    padding-top: 20%!important;
   }
 }
 
