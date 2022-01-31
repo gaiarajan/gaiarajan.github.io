@@ -1,3 +1,7 @@
+.bio-body::selection
+{
+  background: rgb(231,231,205);
+}
 masthead .img-fluid {
   max-width: 70%;
   height: auto;
