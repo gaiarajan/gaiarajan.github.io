@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="other-work-page">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>GAIA RAJAN — OTHER WORK</title>
+    <link rel="icon" type="image/png" sizes="600x420" href="assets/img/image_03.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="other-work-page" id="page-top">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Gaia Rajan</a>
+            <button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item nav-link"><a class="nav-link active" href="books.html">books</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active" href="poems.html">poems</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="other-work.html">other work</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active" href="index.html#about">about</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="contact.html">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="other-work-section" id="other-work">
+        <div class="container">
+            <h2 class="other-work-title">Other Work</h2>
+        </div>
+        
+        <div class="craft-grid">
+            <div class="craft-item" onclick="openLightbox(0)">
+                <img src="assets/img/anatomical_1.jpeg" alt="anatomical sweater">
+            </div>
+            <div class="craft-item" onclick="openLightbox(1)">
+                <img src="assets/img/orange_sweater.jpeg" alt="jellyfish">
+            </div>
+            <div class="craft-item" onclick="openLightbox(2)">
+                <img src="assets/img/noro_sweater.jpeg" alt="Embroidery">
+            </div>
+            <div class="craft-item" onclick="openLightbox(3)">
+                <img src="assets/img/blue_sweater.jpeg" alt="Weaving">
+            </div>
+            <div class="craft-item" onclick="openLightbox(4)">
+                <img src="assets/img/jellyfish.jpeg" alt="Textile Art">
+            </div>
+            <div class="craft-item" onclick="openLightbox(5)">
+                <img src="assets/img/cerberus.jpeg" alt="Textile Art">
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigate(-1)">‹</button>
+        <button class="lightbox-nav lightbox-next" onclick="navigate(1)">›</button>
+        
+        <div class="lightbox-content">
+            <div class="lightbox-image-wrapper">
+                <div class="lightbox-image">
+                    <img id="lightboxImg" src="" alt="">
+                </div>
+                <div class="lightbox-date" id="lightboxDate"></div>
+            </div>
+            <div class="lightbox-info">
+                <p id="lightboxDesc"></p>
+                
+                <div class="lightbox-process" id="lightboxProcess" style="display: none;">
+                    <div class="lightbox-process-title">Process</div>
+                    <div class="lightbox-process-grid" id="lightboxProcessGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <hr>
+            <p><a href="https://x.com/gaiarajan"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;<a href="https://www.instagram.com/gaiarajan/?hl=en"><i class="fa fa-instagram"></i></a>&nbsp; /// by Gaia Rajan</p>
+        </div>
+    </footer>
+
+    <script>
+        const projects = [
+            {
+                desc: "Super bulky sculptural cabled sweater; cables follow the natural movement of the body. The back includes staghorn cables slightly narrowing upwards to mimic a spine.",
+                img: "assets/img/anatomical_1.jpeg",
+                date: "Jan 2026",
+                process: [
+                    "assets/img/anatomical_2.jpeg",
+                    "assets/img/anatomical_3.png",
+                ]
+            },
+            {
+                desc: "Freehanded mesh pullover from orange merino wool, a technique I developed called modified ladder lace.",
+                img: "assets/img/orange_sweater.jpeg",
+                date: "Jul 2025",
+                process: []
+            },
+            {
+                desc: "Freehanded drop shoulder sweater from hand-dyed single-ply wool.",
+                img: "assets/img/noro_sweater.jpeg",
+                date: "Oct 2025",
+                process: [
+                    "assets/img/noro_2.jpeg",
+                ]
+            },
+            {
+                desc: "I freehanded this all over cabled sweater, Noro Madara wool and Ito Sensai mohair held together.",
+                img: "assets/img/blue_sweater.jpeg",
+                date: "Nov 2025",
+                process: [
+                    "assets/img/blue_2.jpeg",
+                ]
+            },
+            {
+                desc: "When I moved out of Pittsburgh, I found an old box full of stuffing. Instead of packing, I made 7 jellyfish over four days and donated them all for Christmas gifts before I left the city.",
+                img: "assets/img/jellyfish.jpeg",
+                date: "Dec 2024",
+                process: []
+            },
+            {
+                desc: "I was Cerberus for Halloween. I made my mask over a week in my living room from three mask blanks and paper clay. Other people were trying it on for most of the night. ",
+                img: "assets/img/cerberus.jpeg",
+                date: "Oct 2025",
+                process: []
+            }
+        ];
+
+        const originalProjects = JSON.parse(JSON.stringify(projects));
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+            
+            projects[currentIndex].img = originalProjects[currentIndex].img;
+            projects[currentIndex].process = [...originalProjects[currentIndex].process];
+        }
+
+        function navigate(direction) {
+            currentIndex = (currentIndex + direction + projects.length) % projects.length;
+            updateLightbox();
+        }
+
+        function swapImage(processIndex) {
+            const project = projects[currentIndex];
+            
+            // Swap the main image with the clicked process image
+            const tempImg = project.img;
+            project.img = project.process[processIndex];
+            project.process[processIndex] = tempImg;
+            
+            // Re-render the lightbox
+            updateLightbox();
+        }
+
+        function updateLightbox() {
+            const project = projects[currentIndex];
+            document.getElementById('lightboxImg').src = project.img;
+            document.getElementById('lightboxDesc').textContent = project.desc;
+            document.getElementById('lightboxDate').textContent = project.date;
+            
+            const processSection = document.getElementById('lightboxProcess');
+            const processGrid = document.getElementById('lightboxProcessGrid');
+            
+            if (project.process && project.process.length > 0) {
+                processSection.style.display = 'block';
+                processGrid.innerHTML = '';
+                
+                project.process.forEach((processImg, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'lightbox-process-item';
+                    div.onclick = () => swapImage(index);
+                    
+                    const img = document.createElement('img');
+                    img.src = processImg;
+                    img.alt = 'Process photo';
+                    
+                    div.appendChild(img);
+                    processGrid.appendChild(div);
+                });
+            } else {
+                processSection.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (!document.getElementById('lightbox').classList.contains('active')) return;
+            
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigate(-1);
+            if (e.key === 'ArrowRight') navigate(1);
+        });
+    </script>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
