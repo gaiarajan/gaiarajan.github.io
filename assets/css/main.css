@@ -6,782 +6,855 @@
    BASE STYLES
    ================= */
 
-html, nav, #about, #bio, #work, #contact, footer, #poems, #other-work {
-  font-family: Helvetica, sans-serif;
-  font-size: 16px;
-  background-color: #fff !important;
-  color: black;
-}
-
-html.books-page,
-html.poems-page {
-  background: #fffaf3;
-}
-
-body.books-page,
-body.contact-page,
-body.poems-page {
-  background-color: #fff;
-}
-
-body.poems-page {
-  background-color: #fff !important;
-}
-
-::selection {
-  background: rgb(171, 176, 213);
-}
-
-.bio-body::selection {
-  background: rgb(153, 153, 32);
-}
-
-.bio-body em::selection,
-a::selection {
-  background: rgb(171, 176, 213);
-}
-
-
-/* =================
-   TYPOGRAPHY
-   ================= */
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: Helvetica, 'Archivo Narrow', sans-serif;
-  font-size: 40px;
-  font-weight: 800;
-  color: rgb(0, 0, 0);
-  text-align: right;
-  text-transform: uppercase;
-}
-
-.mas h2 {
-  margin-top: 65px;
-}
-
-
-/* =================
-   LINKS
-   ================= */
-
-a {
-  transition: all .2s ease-in-out;
-  color: rgb(0, 43, 213);
-  text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  color: rgb(143, 116, 72);
-}
-
-nav a {
-  color: black !important;
-}
-
-#work a:hover,
-.nav-item a:hover,
-#about a:hover,
-#contact a:hover {
-  text-decoration: underline;
-}
-
-.clips a {
-  text-decoration: none;
-}
-
-.clips h2 a,
-.booklink a {
-  color: rgb(143, 116, 72);
-  text-decoration: underline;
-}
-
-.clips h2 a:hover,
-.booklink a:hover {
-  color: rgb(62, 62, 9);
-  text-decoration: underline;
-}
-
-.mothsource a,
-.booklink a {
-  text-decoration: none;
-}
-
-.poems a {
-  text-decoration: none;
-  color: rgb(121, 126, 89);
-}
-
-.poems a:hover {
-  text-decoration: underline;
-  color: rgb(70, 78, 21);
-}
-
-
-/* =================
-   NAVIGATION
-   ================= */
-
-#mainNav {
-  color: rgb(48, 43, 38);
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.navbar-toggler {
-  color: rgb(143, 116, 72);
-  border-color: rgb(143, 116, 72);
-}
-
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 0;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(143, 116, 72, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-#navbarResponsive {
-  border-color: rgb(47, 42, 37);
-  text-transform: none;
-}
-
-.navbar-nav.ms-auto {
-  color: black;
-  font-family: Helvetica, sans-serif;
-}
-
-
-/* =================
-   LAYOUT
-   ================= */
-
-.content-section {
-  padding-top: 0px;
-  padding-bottom: 30px;
-}
-
-/* Main page consistent alignment */
-#work .container,
-#bio .container,
-#contact .container {
-  max-width: 1140px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#work h2,
-#bio h2,
-#contact h2 {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-#work table,
-#bio .row,
-#contact .row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-#about p,
-#contact p {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.book1 {
-  margin-top: 60px;
-  padding-bottom: 40px;
-}
-
-.book1:last-of-type {
-  padding-top: 40px;
-}
-
-.book1 .col-lg-5,
-.book1 .col-xl-6,
-.book1 .col-xxl-6 {
-  padding-right: 0px;
-}
-
-.book1 .col-lg-7.mx-auto,
-.book1 .col-xl-6.mx-auto,
-.book1 .col-xxl-6.mx-auto {
-  padding-left: 25px;
-}
-
-.book1 h1 {
-  color: #422343;
-  text-align: left;
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.book1 .booklink {
-  color: #987e56;
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.book1 .mothsource {
-  text-decoration: none;
-  color: rgb(84, 63, 30);
-  text-align: left;
-  padding: 10px 0px 0px 0px;
-}
-
-.book1 img.mothcover {
-  max-height: 650px;
-  max-width: 100%;
-}
-
-table {
-  border-collapse: collapse;
-  text-align: left;
-  width: 75%;
-}
-
-
-/* =================
-   IMAGES
-   ================= */
-
-img {
-  border-radius: 5px;
-}
-
-.mothcover {
-  border-radius: 0;
-}
-
-
-/* =================
-   BUTTONS & FORMS
-   ================= */
-
-.submit,
-.btn {
-  background: transparent;
-  border: 1px solid lightgrey;
-  text-transform: none;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 5px 20px;
-  min-height: 40px;
-}
-
-.submit:hover,
-.btn:hover {
-  background-color: rgb(0, 43, 213);
-  border: 1px solid rgb(0, 43, 213);
-  color: white;
-}
-
-.btn-primary {
-  background: transparent;
-  border: 1px solid lightgrey;
-  color: black;
-}
-
-.btn-primary:hover {
-  background-color: rgb(0, 43, 213);
-  border-color: rgb(0, 43, 213);
-  color: #fff;
-}
-
-.btn-primary:not(:disabled):not(.disabled).active,
-.btn-primary:not(:disabled):not(.disabled):active,
-.show > .btn-primary.dropdown-toggle {
-  background-color: rgb(0, 43, 213);
-  border-color: rgb(0, 43, 213);
-  color: #fff;
-}
-
-.submit-now {
-  margin-top: 20px;
-  font-size: 16px;
-  min-width: 120px;
-  padding: 8px 20px;
-  min-height: 30px;
-}
-
-.contactsub:hover {
-  background-color: rgb(0, 43, 213);
-  border-color: rgb(0, 43, 213);
-  color: white;
-}
-
-.book-btn:hover {
-  background-color: rgb(66, 70, 38);;
-  border-color: rgb(121, 126, 89);;
-  color: white;
-}
-
-/* Form Controls */
-.form-control.input {
-  border: 0;
-  background: transparent;
-  border-bottom: 1px solid silver;
-  border-radius: 0px !important;
-}
-
-.form-control.input:focus {
-  border: 1.5px solid rgb(0, 43, 213);
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  border-radius: 8px !important;
-}
-
-
-/* Contact Page Specific */
-.contact-page #poems .col-lg-5 img {
-  padding-top: 70px;
-  max-width: 100%;
-}
-
-.contact-page .contact-form-wrapper {
-  width: 100%;
-  min-height: 550px;
-  margin-top: 50px;
-  background-color: rgba(255, 255, 255, 0.79);
-}
-
-.contact-page .contact-form-wrapper form {
-  padding-top: 40px;
-}
-
-.contact-page .contact-form-wrapper h1 {
-  width: 100%;
-}
-
-.contact-page .contact-form-wrapper .form-control {
-  width: 50%;
-  margin-left: 25%;
-}
-
-.contact-page .contact-form-wrapper textarea {
-  min-height: 200px;
-}
-
-
-/* Modern Form Styles */
-.modern-form__form-container {
-  padding-top: 2%;
-}
-
-.modern-form__form-group--padding-r {
-  padding-right: 20px;
-}
-
-.modern-form__form-group--padding-l {
-  padding-left: 0;
-}
-
-.modern-form__form-group--padding-t {
-  padding-top: 50px;
-}
-
-.modern-form__form-control--textarea {
-  height: 95px !important;
-  resize: none;
-}
-
-.modern-form__hr {
-  border-color: #4daade;
-  border-width: 2px;
-  width: 121px;
-}
-
-
-/* Input Groups */
-.input-group > .input-group-append > .btn,
-.input-group > .input-group-append > .input-group-text,
-.input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
-.input-group > .input-group-prepend:not(:first-child) > .btn,
-.input-group > .input-group-prepend:not(:first-child) > .input-group-text {
-  border-color: rgb(12, 129, 247);
-  border-radius: 2px;
-}
-
-.input-group > .custom-select:not(:first-child),
-.input-group > .form-control:not(:first-child) {
-  border-radius: 2px;
-  border-color: #fff;
-}
-
-
-/* =================
-   RESPONSIVE STYLES
-   ================= */
-
-@media (min-width: 768px) {
-  .mas h2 {
-    margin: 0 !important;
+   html, nav, #about, #bio, #work, #contact, footer, #poems, #other-work {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #fff !important;
+    color: black;
   }
   
-  .mas {
-    padding-top: 100px !important;
-    bottom: 100px !important;
+  html.books-page,
+  html.poems-page {
+    background: #fffaf3;
   }
-}
-
-@media (min-width: 992px) {
+  
+  body.books-page,
+  body.contact-page,
+  body.poems-page {
+    background-color: #fff;
+  }
+  
+  body.poems-page {
+    background-color: #fff !important;
+  }
+  
+  ::selection {
+    background: rgb(171, 176, 213);
+  }
+  
+  .bio-body::selection {
+    background: rgb(153, 153, 32);
+  }
+  
+  .bio-body em::selection,
+  a::selection {
+    background: rgb(171, 176, 213);
+  }
+  
+  
+  /* =================
+     TYPOGRAPHY
+     ================= */
+  
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: Helvetica, 'Archivo Narrow', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    text-align: right;
+    text-transform: uppercase;
+  }
+  
+  .mas h2 {
+    margin-top: 65px;
+  }
+  
+  
+  /* =================
+     LINKS
+     ================= */
+  
+  a {
+    transition: all .2s ease-in-out;
+    color: rgb(0, 43, 213);
+    text-decoration: none;
+  }
+  
+  a:focus,
+  a:hover {
+    color: rgb(143, 116, 72);
+  }
+  
+  nav a {
+    color: black !important;
+  }
+  
+  #work a:hover,
+  .nav-item a:hover,
+  #about a:hover,
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .clips a {
+    text-decoration: none;
+  }
+  
+  .clips h2 a,
+  .booklink a {
+    color: rgb(143, 116, 72);
+    text-decoration: underline;
+  }
+  
+  .clips h2 a:hover,
+  .booklink a:hover {
+    color: rgb(62, 62, 9);
+    text-decoration: underline;
+  }
+  
+  .mothsource a,
+  .booklink a {
+    text-decoration: none;
+  }
+  
+  .poems a {
+    text-decoration: none;
+    color: rgb(121, 126, 89);
+  }
+  
+  .poems a:hover {
+    text-decoration: underline;
+    color: rgb(70, 78, 21);
+  }
+  
+  
+  /* =================
+     NAVIGATION
+     ================= */
+  
+  #mainNav {
+    color: rgb(48, 43, 38);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .navbar-toggler {
+    color: rgb(143, 116, 72);
+    border-color: rgb(143, 116, 72);
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(143, 116, 72, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  #navbarResponsive {
+    border-color: rgb(47, 42, 37);
+    text-transform: none;
+  }
+  
+  .navbar-nav.ms-auto {
+    color: black;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  
+  /* =================
+     LAYOUT
+     ================= */
+  
   .content-section {
     padding-top: 0px;
-    padding-bottom: 50px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .bio-body {
-    width: 80%;
+    padding-bottom: 30px;
   }
   
-  h1 {
-    width: 70%;
+  /* Main page consistent alignment */
+  #work .container,
+  #bio .container,
+  #contact .container {
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  #work h2,
+  #bio h2,
+  #contact h2 {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  #work table,
+  #bio .row,
+  #contact .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  #about p,
+  #contact p {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .book1 {
+    margin-top: 60px;
+    padding-bottom: 40px;
+  }
+  
+  .book1:last-of-type {
+    padding-top: 40px;
+  }
+  
+  .book1 .col-lg-5,
+  .book1 .col-xl-6,
+  .book1 .col-xxl-6 {
+    padding-right: 0px;
+  }
+  
+  .book1 .col-lg-7.mx-auto,
+  .book1 .col-xl-6.mx-auto,
+  .book1 .col-xxl-6.mx-auto {
+    padding-left: 25px;
+  }
+  
+  .book1 h1 {
+    color: #422343;
     text-align: left;
+    font-size: 30px;
+    margin-bottom: 15px;
   }
-}
-
-
-/* =================
-   UTILITY CLASSES
-   ================= */
-
-#work h2,
-#bio h2 {
-  text-transform: none;
-}
-
-#bio h2 {
-  margin-bottom: 2px !important;
-}
-
-#about p {
-  top: 0;
-  bottom: 0;
-  padding: 0;
-  margin: 1em;
-}
-
-footer p {
-  text-align: center;
-}
-
-.clips h3,
-.clips h6,
-.mothsource a {
-  text-transform: none;
-}
-
-.specialrow {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-
-/* =================
-   OTHER WORK
-   ================= */
-
-.other-work-section {
-  padding-top: 120px;
-  padding-bottom: 80px;
-}
-
-.other-work-title {
-  margin-bottom: 60px;
-  text-transform: uppercase;
-}
-
-.craft-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.craft-item {
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.craft-item:hover {
-  opacity: 0.9;
-}
-
-.craft-item:nth-child(1) {
-  grid-column: span 7;
-}
-
-.craft-item:nth-child(2) {
-  grid-column: span 5;
-}
-
-.craft-item:nth-child(3) {
-  grid-column: span 6;
-}
-
-.craft-item:nth-child(4) {
-  grid-column: span 6;
-}
-
-.craft-item:nth-child(5) {
-  grid-column: span 4;
-}
-
-.craft-item:nth-child(6) {
-  grid-column: span 5;
-}
-
-.craft-item img {
-  width: 100%;
-  display: block;
-  transition: opacity 0.3s ease;
-}
-
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fffaf3;
-  z-index: 9999;
-  animation: fadeIn 0.3s ease;
-  overflow: scroll;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.lightbox.active {
-  display: block;
-}
-
-.lightbox-close {
-  position: fixed;
-  top: 30px;
-  right: 40px;
-  background: none;
-  border: none;
-  font-size: 40px;
-  cursor: pointer;
-  color: #422343;
-  z-index: 10000;
-  transition: transform 0.2s ease;
-}
-
-.lightbox-close:hover {
-  transform: rotate(90deg);
-}
-
-.lightbox-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 100px 60px 60px 60px;
-  gap: 60px;
-}
-
-.lightbox-image-wrapper {
-  flex: 1;
-  max-width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.lightbox-image {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lightbox-image img {
-  max-width: 100%;
-  max-height: 75vh;
-  object-fit: contain;
-}
-
-.lightbox-date {
-  width: 60%;
-  text-align: right;
-  margin-top: 10px;
-  font-size: 14px;
-  color: rgb(84, 63, 30);
-  opacity: 0.7;
-  text-transform: uppercase;
-}
-
-.lightbox-info {
-  flex: 0 0 350px;
-  padding: 0;
-}
-
-.lightbox-info p {
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgb(84, 63, 30);
-}
-
-.lightbox-process {
-  width: 100%;
-  margin-top: 40px;
-}
-
-.lightbox-process-title {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgb(84, 63, 30);
-  margin-bottom: 15px;
-  opacity: 0.7;
-}
-
-.lightbox-process-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.lightbox-process-item {
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.lightbox-process-item:hover {
-  opacity: 0.8;
-}
-
-.lightbox-process-item img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Navigation arrows */
-.lightbox-nav {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 50px;
-  cursor: pointer;
-  color: #422343;
-  z-index: 10000;
-  transition: transform 0.2s ease, color 0.2s ease;
-  padding: 20px;
-}
-
-.lightbox-nav:hover {
-  color: rgb(0, 43, 213);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.lightbox-prev {
-  left: 20px;
-}
-
-.lightbox-next {
-  right: 20px;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .craft-grid {
-      grid-template-columns: repeat(6, 1fr);
-      padding: 0 20px;
-      gap: 15px;
+  
+  .book1 .booklink {
+    color: #987e56;
+    text-align: left;
+    margin-bottom: 10px;
   }
-
-  .craft-item:nth-child(1) {
-      grid-column: span 6;
+  
+  .book1 .mothsource {
+    text-decoration: none;
+    color: rgb(84, 63, 30);
+    text-align: left;
+    padding: 10px 0px 0px 0px;
   }
-
-  .craft-item:nth-child(2) {
-      grid-column: span 6;
+  
+  .book1 img.mothcover {
+    max-height: 650px;
+    max-width: 100%;
   }
-
-  .craft-item:nth-child(3) {
-      grid-column: span 6;
+  
+  table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 75%;
   }
-
-  .craft-item:nth-child(4) {
-      grid-column: span 6;
+  
+  
+  /* =================
+     IMAGES
+     ================= */
+  
+  img {
+    border-radius: 5px;
   }
-
-  .craft-item:nth-child(5) {
-      grid-column: span 6;
+  
+  .mothcover {
+    border-radius: 0;
   }
-
-  .craft-item:nth-child(6) {
-      grid-column: span 6;
+  
+  
+  /* =================
+     BUTTONS & FORMS
+     ================= */
+  
+  .submit,
+  .btn {
+    background: transparent;
+    border: 1px solid lightgrey;
+    text-transform: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 20px;
+    min-height: 40px;
   }
-
-  .lightbox-content {
-      flex-direction: column;
-      padding: 100px 30px 30px;
-      gap: 30px;
+  
+  .submit:hover,
+  .btn:hover {
+    background-color: rgb(0, 43, 213);
+    border: 1px solid rgb(0, 43, 213);
+    color: white;
   }
-
-  .lightbox-image-wrapper {
-      max-width: 100%;
+  
+  .btn-primary {
+    background: transparent;
+    border: 1px solid lightgrey;
+    color: black;
   }
-
-  .lightbox-info {
-      flex: 0 0 auto;
-      width: 100%;
-      padding: 0;
+  
+  .btn-primary:hover {
+    background-color: rgb(0, 43, 213);
+    border-color: rgb(0, 43, 213);
+    color: #fff;
   }
-
-  .lightbox-process-grid {
-      grid-template-columns: repeat(2, 1fr);
+  
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-primary.dropdown-toggle {
+    background-color: rgb(0, 43, 213);
+    border-color: rgb(0, 43, 213);
+    color: #fff;
   }
-}
-
-@media (max-width: 576px) {
-  .craft-grid {
-      grid-template-columns: 1fr;
-      gap: 10px;
+  
+  .submit-now {
+    margin-top: 20px;
+    font-size: 16px;
+    min-width: 120px;
+    padding: 8px 20px;
+    min-height: 30px;
   }
-
-  .craft-item:nth-child(1),
-  .craft-item:nth-child(2),
-  .craft-item:nth-child(3),
-  .craft-item:nth-child(4),
-  .craft-item:nth-child(5),
-  .craft-item:nth-child(6) {
-      grid-column: span 1;
+  
+  .contactsub:hover {
+    background-color: rgb(0, 43, 213);
+    border-color: rgb(0, 43, 213);
+    color: white;
   }
-
+  
+  .book-btn:hover {
+    background-color: rgb(66, 70, 38);;
+    border-color: rgb(121, 126, 89);;
+    color: white;
+  }
+  
+  /* Form Controls */
+  .form-control.input {
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid silver;
+    border-radius: 0px !important;
+  }
+  
+  .form-control.input:focus {
+    border: 1.5px solid rgb(0, 43, 213);
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    border-radius: 8px !important;
+  }
+  
+  
+  /* Contact Page Specific */
+  .contact-page #poems .col-lg-5 img {
+    padding-top: 70px;
+    max-width: 100%;
+  }
+  
+  .contact-page .contact-form-wrapper {
+    width: 100%;
+    min-height: 550px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.79);
+  }
+  
+  .contact-page .contact-form-wrapper form {
+    padding-top: 40px;
+  }
+  
+  .contact-page .contact-form-wrapper h1 {
+    width: 100%;
+  }
+  
+  .contact-page .contact-form-wrapper .form-control {
+    width: 50%;
+    margin-left: 25%;
+  }
+  
+  .contact-page .contact-form-wrapper textarea {
+    min-height: 200px;
+  }
+  
+  
+  /* Modern Form Styles */
+  .modern-form__form-container {
+    padding-top: 2%;
+  }
+  
+  .modern-form__form-group--padding-r {
+    padding-right: 20px;
+  }
+  
+  .modern-form__form-group--padding-l {
+    padding-left: 0;
+  }
+  
+  .modern-form__form-group--padding-t {
+    padding-top: 50px;
+  }
+  
+  .modern-form__form-control--textarea {
+    height: 95px !important;
+    resize: none;
+  }
+  
+  .modern-form__hr {
+    border-color: #4daade;
+    border-width: 2px;
+    width: 121px;
+  }
+  
+  
+  /* Input Groups */
+  .input-group > .input-group-append > .btn,
+  .input-group > .input-group-append > .input-group-text,
+  .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+  .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
+  .input-group > .input-group-prepend:not(:first-child) > .btn,
+  .input-group > .input-group-prepend:not(:first-child) > .input-group-text {
+    border-color: rgb(12, 129, 247);
+    border-radius: 2px;
+  }
+  
+  .input-group > .custom-select:not(:first-child),
+  .input-group > .form-control:not(:first-child) {
+    border-radius: 2px;
+    border-color: #fff;
+  }
+  
+  
+  /* =================
+     RESPONSIVE STYLES
+     ================= */
+  
+  @media (min-width: 768px) {
+    .mas h2 {
+      margin: 0 !important;
+    }
+    
+    .mas {
+      padding-top: 100px !important;
+      bottom: 100px !important;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .content-section {
+      padding-top: 0px;
+      padding-bottom: 50px;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .bio-body {
+      width: 80%;
+    }
+    
+    h1 {
+      width: 70%;
+      text-align: left;
+    }
+  }
+  
+  
+  /* =================
+     UTILITY CLASSES
+     ================= */
+  
+  #work h2,
+  #bio h2 {
+    text-transform: none;
+  }
+  
+  #bio h2 {
+    margin-bottom: 2px !important;
+  }
+  
+  #about p {
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 1em;
+  }
+  
+  footer p {
+    text-align: center;
+  }
+  
+  .clips h3,
+  .clips h6,
+  .mothsource a {
+    text-transform: none;
+  }
+  
+  .specialrow {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  
+  /* =================
+     OTHER WORK
+     ================= */
+  
   .other-work-section {
-      padding-top: 100px;
+    padding-top: 120px;
+    padding-bottom: 80px;
   }
-
-  .lightbox-nav {
-      font-size: 35px;
-      padding: 10px;
+  
+  .other-work-title {
+    margin-bottom: 60px;
+    text-transform: uppercase;
   }
-
+  
+  .craft-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  .craft-item {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .craft-item:hover {
+    opacity: 0.9;
+  }
+  
+  .craft-item:nth-child(1) {
+    grid-column: span 7;
+  }
+  
+  .craft-item:nth-child(2) {
+    grid-column: span 5;
+  }
+  
+  .craft-item:nth-child(3) {
+    grid-column: span 6;
+  }
+  
+  .craft-item:nth-child(4) {
+    grid-column: span 6;
+  }
+  
+  .craft-item:nth-child(5) {
+    grid-column: span 4;
+  }
+  
+  .craft-item:nth-child(6) {
+    grid-column: span 5;
+  }
+  
+  .craft-item img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fffaf3;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+    overflow: scroll;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .lightbox.active {
+    display: block;
+  }
+  
   .lightbox-close {
-      font-size: 30px;
-      right: 20px;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: #422343;
+    z-index: 10000;
+    transition: transform 0.2s ease;
   }
-}
+  
+  .lightbox-close:hover {
+    transform: rotate(90deg);
+  }
+  
+  .lightbox-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 60px 60px 60px;
+    gap: 60px;
+  }
+  
+  .lightbox-image-wrapper {
+    flex: 1;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .lightbox-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lightbox-image img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+  }
+  
+  .lightbox-date {
+    width: 60%;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(84, 63, 30);
+    opacity: 0.7;
+    text-transform: uppercase;
+  }
+  
+  .lightbox-info {
+    flex: 0 0 350px;
+    padding: 0;
+  }
+  
+  .lightbox-info p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgb(84, 63, 30);
+  }
+  
+  .lightbox-process {
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  .lightbox-process-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(84, 63, 30);
+    margin-bottom: 15px;
+    opacity: 0.7;
+  }
+  
+  .lightbox-process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .lightbox-process-item {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .lightbox-process-item:hover {
+    opacity: 0.8;
+  }
+  
+  .lightbox-process-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Navigation arrows */
+  .lightbox-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: #422343;
+    z-index: 10000;
+    transition: transform 0.2s ease, color 0.2s ease;
+    padding: 20px;
+  }
+  
+  .lightbox-nav:hover {
+    color: rgb(0, 43, 213);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .lightbox-prev {
+    left: 20px;
+  }
+  
+  .lightbox-next {
+    right: 20px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .craft-grid {
+        grid-template-columns: repeat(6, 1fr);
+        padding: 0 20px;
+        gap: 15px;
+    }
+  
+    .craft-item:nth-child(1) {
+        grid-column: span 6;
+    }
+  
+    .craft-item:nth-child(2) {
+        grid-column: span 6;
+    }
+  
+    .craft-item:nth-child(3) {
+        grid-column: span 6;
+    }
+  
+    .craft-item:nth-child(4) {
+        grid-column: span 6;
+    }
+  
+    .craft-item:nth-child(5) {
+        grid-column: span 6;
+    }
+  
+    .craft-item:nth-child(6) {
+        grid-column: span 6;
+    }
+  
+    .lightbox-content {
+        flex-direction: column;
+        padding: 100px 30px 30px;
+        gap: 30px;
+    }
+  
+    .lightbox-image-wrapper {
+        max-width: 100%;
+    }
+  
+    .lightbox-info {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 0;
+    }
+  
+    .lightbox-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .craft-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+  
+    .craft-item:nth-child(1),
+    .craft-item:nth-child(2),
+    .craft-item:nth-child(3),
+    .craft-item:nth-child(4),
+    .craft-item:nth-child(5),
+    .craft-item:nth-child(6) {
+        grid-column: span 1;
+    }
+  
+    .other-work-section {
+        padding-top: 100px;
+    }
+  
+    .lightbox-nav {
+        font-size: 35px;
+        padding: 10px;
+    }
+  
+    .lightbox-close {
+        font-size: 30px;
+        right: 20px;
+    }
+  
+    .poems-page #poems .container {
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+  
+    .poems-page #poems .col-xl-1 {
+        display: none;
+    }
+  
+    .poems-page #poems table {
+        width: 100%;
+    }
+  
+    .poems-page #poems h2 {
+        text-align: left !important;
+    }
+  
+    #work .container {
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+  
+    #work table {
+        width: 100%;
+    }
+  
+    #work table td {
+        display: block;
+        width: 100%;
+        padding: 2px 0;
+    }
+  
+    #work table td:first-child {
+        font-weight: 500;
+        padding-bottom: 0;
+    }
+  
+    #work table td:last-child {
+        padding-bottom: 12px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+  
+    #work table tr {
+        display: block;
+        margin-bottom: 8px;
+    }
+  
+    .poems-page #poems table td {
+        display: block;
+        width: 100%;
+        padding: 2px 0;
+    }
+  
+    .poems-page #poems table td:first-child {
+        font-weight: 500;
+        padding-bottom: 0;
+    }
+  
+    .poems-page #poems table td:last-child {
+        padding-bottom: 12px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+  
+    .poems-page #poems table tr {
+        display: block;
+        margin-bottom: 8px;
+    }
+  }
+  
